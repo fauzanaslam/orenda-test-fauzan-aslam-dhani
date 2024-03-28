@@ -1,4 +1,4 @@
-tech: mysql with sequelize, materialUi
+tech: mysql with sequelize, materialUi, Typescript
 
 create database orendatest
 
