@@ -50,50 +50,71 @@ export default function StickyHeadTable() {
           noValidate
           sx={{ bgcolor: "white" }}
         >
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Customer Name"
-            autoFocus
-            {...register("name", { required: "kolom ini harus diisi" })}
-          />
-          {errors.name && (
-            <span className="text-red-500">{errors.name.message}</span>
-          )}{" "}
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Phone Number"
-            autoFocus
-            {...register("phone", { required: "kolom ini harus diisi" })}
-          />
-          {errors.phone && (
-            <span className="text-red-500">{errors.phone.message}</span>
-          )}{" "}
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Email Address"
-            autoFocus
-            {...register("email", { required: "kolom ini harus diisi" })}
-          />
-          {errors.email && (
-            <span className="text-red-500">{errors.email.message}</span>
-          )}{" "}
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Address"
-            autoFocus
-            {...register("address", { required: "kolom ini harus diisi" })}
-          />
-          {errors.address && (
-            <span className="text-red-500">{errors.address.message}</span>
-          )}
+          <Box sx={{ height: "300px" }}>
+            <Box sx={{ display: "flex", gap: "20px" }}>
+              <Box sx={{ width: "100%" }}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  label="Customer Name"
+                  autoFocus
+                  {...register("name", { required: "kolom ini harus diisi" })}
+                />
+                {errors.name && (
+                  <span className="text-red-500">{errors.name.message}</span>
+                )}{" "}
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    label="Phone Number"
+                    autoFocus
+                    {...register("phone", {
+                      required: "kolom ini harus diisi",
+                    })}
+                  />
+                  {errors.phone && (
+                    <span className="text-red-500">{errors.phone.message}</span>
+                  )}{" "}
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    label="Email Address"
+                    autoFocus
+                    {...register("email", {
+                      required: "kolom ini harus diisi",
+                    })}
+                  />
+                  {errors.email && (
+                    <span className="text-red-500">{errors.email.message}</span>
+                  )}{" "}
+                </Box>
+              </Box>
+              <Box sx={{ width: "100%", height: "100%" }}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  label="Address"
+                  autoFocus
+                  inputProps={{
+                    style: {
+                      height: "100px",
+                    },
+                  }}
+                  {...register("address", {
+                    required: "kolom ini harus diisi",
+                  })}
+                />
+                {errors.address && (
+                  <span className="text-red-500">{errors.address.message}</span>
+                )}
+              </Box>
+            </Box>
+          </Box>
           <Box
             sx={{
               margin: "20px",

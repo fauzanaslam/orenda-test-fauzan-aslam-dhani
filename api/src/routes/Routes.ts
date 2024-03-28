@@ -28,6 +28,6 @@ router.delete("/product/:id", ProductController.DeleteProduct);
 router.post("/orders", OrderController.createOrder);
 
 // detail order based on orderId routing
-// router.get("/orders/:orderId", OrderController.getDetailOrder);
+router.get("/orders/:orderId", OrderController.getDetailOrder);
 
 export default router;
