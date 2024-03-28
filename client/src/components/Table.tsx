@@ -52,12 +52,15 @@ export default function StickyHeadTable() {
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <Typography>Customers Page</Typography>
       <AppBar position="static">
         <Toolbar sx={{ justifyContent: "space-between", bgcolor: "white" }}>
           <Typography color="black">All Customers</Typography>
-          <Button sx={{ bgcolor: "red", color: "white" }}>
-            Add New Customer
-          </Button>
+          <a href="/add-customer">
+            <Button variant="contained" sx={{ bgcolor: "red", color: "white" }}>
+              Add New Customer
+            </Button>
+          </a>
         </Toolbar>
       </AppBar>
       <TableContainer sx={{ maxHeight: 440 }}>
