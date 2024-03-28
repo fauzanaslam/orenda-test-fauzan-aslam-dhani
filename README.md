@@ -4,11 +4,11 @@ open project
 
 cd api on terminal
 
-run npx sequelize db:migrate
+run "npx sequelize db:migrate"
 
-run npx sequelize-cli db:seed:all
+run "npx sequelize-cli db:seed:all"
 
-run npm run dev
+run "npm run dev"
 
 frontend .env:
 
@@ -18,4 +18,15 @@ FRONTEND_URL=http://127.0.0.1:5173
 
 cd client on another terminal
 
-run npm run dev
+run "npm run dev"
+
+
+backend payload:
+
+register: post(http://localhost:7899/user/signup)
+
+{
+    "name": "....."
+}
+
+
