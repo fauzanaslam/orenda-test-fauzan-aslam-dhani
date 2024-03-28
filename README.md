@@ -21,7 +21,7 @@ cd client on another terminal
 run "npm run dev"
 
 
---- backend payload: ---
+------------------------------------- backend payload: ---------------------------------------------------
 
 register: post(http://localhost:7899/user/signup)
 
