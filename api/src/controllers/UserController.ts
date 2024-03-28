@@ -26,13 +26,15 @@ const Register = async (req: Request, res: Response): Promise<Response> => {
 };
 
 const UserLogin = async (req: Request, res: Response) => {
-  const name = req.body;
+  const { name } = req.body;
 
   try {
-    const user = await User.findOne(name);
+    const user = await User.findOne({ where: { name } });
+
     if (!user) {
-      return res.status(400).json({ message: "user belum terdaftar" });
+      return res.status(400).json({ message: "User belum terdaftar" });
     }
+
     const token = jwt.sign(
       { userId: user.id },
       process.env.JWT_SECRET_KEY as string,
@@ -47,6 +49,7 @@ const UserLogin = async (req: Request, res: Response) => {
       maxAge: 86400000,
       sameSite: "none",
     });
+
     res.status(200).json({ userId: user.id });
   } catch (error: any) {
     res.status(500).json({ message: error.message });
