@@ -58,7 +58,7 @@ export default function StickyHeadTable() {
           <Typography color="black">All Customers</Typography>
           <a href="/add-customer">
             <Button variant="contained" sx={{ bgcolor: "red", color: "white" }}>
-              Add New Customer
+              + Add New Customer
             </Button>
           </a>
         </Toolbar>

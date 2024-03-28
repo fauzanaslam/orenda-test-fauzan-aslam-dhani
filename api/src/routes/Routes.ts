@@ -3,6 +3,7 @@ import express from "express";
 import UserController from "../controllers/UserController";
 import CustomerController from "../controllers/CustomerController";
 import ProductController from "../controllers/ProductController";
+import OrderController from "../controllers/OrderController";
 
 const router = express.Router();
 
@@ -22,5 +23,11 @@ router.post("/product", ProductController.CreateProduct);
 router.get("/product", ProductController.GetAllProduct);
 router.patch("/product/:id", ProductController.UpdateProduct);
 router.delete("/product/:id", ProductController.DeleteProduct);
+
+// create order with multipe product routing
+router.post("/orders", OrderController.createOrder);
+
+// detail order based on orderId routing
+// router.get("/orders/:orderId", OrderController.getDetailOrder);
 
 export default router;
