@@ -1,3 +1,5 @@
+tech: mysql with sequelize
+
 create database orendatest
 
 open project
