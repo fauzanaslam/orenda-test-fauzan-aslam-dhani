@@ -29,13 +29,19 @@ register: post(http://localhost:7899/user/signup)
     "name": "....."
 }
 
+----------------------------------------------
+
 login: post(http://localhost:7899/user/login)
 
 {
     "name": "...."
 }
 
+----------------------------------------------
+
 logout: post(http://localhost:7899/user/logout)
+
+------------------------------------------------
 
 create-customer: post(http://localhost:7899/customer)
 
@@ -46,7 +52,11 @@ create-customer: post(http://localhost:7899/customer)
     "address": "....."
 }
 
+-------------------------------------------------
+
 get-all-customer: get(http://localhost:7899/customer)
+
+--------------------------------------------------
 
 update-customer: patch(http://localhost:7899/customer/:customerId)
 
@@ -57,7 +67,11 @@ update-customer: patch(http://localhost:7899/customer/:customerId)
     "address": "....."
 }
 
+-----------------------------------------------------
+
 delete-customer: delete(http://localhost:7899/customer/:customerId)
+
+-------------------------------------------------------
 
 create-product: post(http://localhost:7899/product)
 
@@ -67,7 +81,11 @@ create-product: post(http://localhost:7899/product)
     "price": "...."
 }
 
+---------------------------------------------------------
+
 get-all-product: get(http://localhost:7899/product)
+
+------------------------------------------------------------
 
 update-product: patch(http://localhost:7899/product/:productId)
 
@@ -77,7 +95,11 @@ update-product: patch(http://localhost:7899/product/:productId)
     "price": "...."
 }
 
+----------------------------------------------------------------
+
 delete-product: delete(http://localhost:7899/product/:productId)
+
+------------------------------------------------------------
 
 create-order: post(http://localhost:7899/orders)
 
